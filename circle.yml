@@ -1,16 +1,16 @@
 ## Customize the test machine
-#machine:
-# java:
-#  version: oraclejdk7
+machine:
+ java:
+  version: oraclejdk7
   
 ## Customize dependencies
-#dependencies:
-# override:
-#  - ./gradlew compileTestJava
+dependencies:
+ override:
+  - ./gradlew compileTestJava
 
-# we automatically cache and restore many dependencies between
-# builds. If you need to, you can add custom paths to cache:
-# cache_directories:
-#  - "~/.gradle"
-#  - "build"
+## we automatically cache and restore many dependencies between
+## builds. If you need to, you can add custom paths to cache:
+cache_directories:
+  - "~/.gradle"
+  - "build"
 
