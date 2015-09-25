@@ -4,16 +4,16 @@ task wrapper(type: Wrapper) {
     gradleVersion = '2.0'
 }
 
-//apply plugin: 'java'
-//apply plugin: 'eclipse'
+apply plugin: 'java'
+apply plugin: 'eclipse'
 
-//repositories { mavenCentral() }
+repositories { mavenCentral() }
 
-//dependencies {
-//    compile([
-//          'commons-collections:commons-collections:3.2',
-//            'joda-time:joda-time:2.6'
-//        ])
-//
-//    testCompile([ 'junit:junit:4.+'])
-//}
+dependencies {
+    compile([
+          'commons-collections:commons-collections:3.2',
+            'joda-time:joda-time:2.6'
+        ])
+
+    testCompile([ 'junit:junit:4.+'])
+}
