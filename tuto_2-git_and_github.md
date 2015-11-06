@@ -84,7 +84,7 @@ This graph contains the same working areas as before plus the remote repository.
 
 ##Assignment
 
-1. Create a branch on your own to
+1. Create a branch on your own ```git checkout -b feature/sum```
   * Create a class SumUtils in the hello package with a method in this class to add two integers
     * ```public static int sum(int i, int j) {	return i + j; }```
   * Create a folder sampleProject/src/test/java
