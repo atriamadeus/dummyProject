@@ -14,3 +14,9 @@ dependencies:
 #  - "~/.gradle"
 #  - "build"
 
+test:
+  override: 
+    - GRADLE_OPTS="-Xmx512m" ./gradlew sonarqube
+
+
+

@@ -1,13 +1,61 @@
 description = "Sample project to introduce Git, Gradle and CircleCI"
 
+
 task wrapper(type: Wrapper) {
     gradleVersion = '2.0'
 }
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'org.sonarqube'
+apply plugin: 'sonar-runner'
+
+
+sonarqube {
+    properties {
+        property "sonar.projectName", "Java :: Simple Project :: SonarQube Scanner for Gradle"
+        property "sonar.projectVersion", "1.0"
+        property "sonar.projectKey", "org.sonarqube:java-gradle-simple"
+        property "sonar.jacoco.reportPath", "${project.buildDir}/jacoco/test.exec"
+        property "sonar.host.url", "http://sonar.tutor.com"
+    }
+}
+
+sonarRunner {
+    sonarProperties  {
+        property "sonar.projectName", "Java :: Simple Project :: SonarQube Scanner for Gradle (sonarRunner plugin)"
+        property "sonar.projectVersion", "1.0"
+        property "sonar.projectKey", "org.sonarRunner:java-gradle-simple"
+        property "sonar.jacoco.reportPath", "${project.buildDir}/jacoco/test.exec"
+        property "sonar.host.url", "http://sonar.tutor.com"
+        property "sonar.jdbc.url", "jdbc:mysql://sonar.tuto.com/sonar"
+        property "sonar.jdbc.driverClassName", "com.mysql.jdbc.Driver"
+        property "sonar.jdbc.username", "ahmed"
+        property "sonar.jdbc.password", "ahmed"
+    }
+}
+
+
+buildscript {
+    repositories { 
+      maven {
+        url "http://repo1.maven.org/maven2/"
+      }
+      maven {
+        url "https://plugins.gradle.org/m2/"
+      }
+      mavenLocal()
+    }
+    dependencies { 
+      classpath 'org.codehaus.sonar.runner:sonar-runner-dist:2.4'
+      classpath 'org.ajoberstar:gradle-jacoco:0.1.0'
+      classpath 'org.sonarqube.gradle:gradle-sonarqube-plugin:1.0'
+    }
+}
+
 
 repositories { mavenCentral() }
+
 
 dependencies {
     compile([
