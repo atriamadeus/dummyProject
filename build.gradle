@@ -17,7 +17,6 @@ sonarqube {
         property "sonar.projectVersion", "1.0"
         property "sonar.projectKey", "org.sonarqube:java-gradle-simple"
         property "sonar.jacoco.reportPath", "${project.buildDir}/jacoco/test.exec"
-        property "sonar.host.url", "http://sonar.tutor.com"
     }
 }
 
