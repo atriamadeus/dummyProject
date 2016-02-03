@@ -29,4 +29,4 @@ Then you're all set to start looking at these tutorials. The tutorials are meant
 
 1. [Gradle and Circle CI](tuto_1-gradle_and_circle.md)
 2. [Git and GitHub](tuto_2-git_and_github.md)
-3. [Sonar](tuto_3_sonar.md)
+3. [Sonar](tuto_3-sonar.md)
