@@ -13,24 +13,21 @@ apply plugin: 'sonar-runner'
 
 sonarqube {
     properties {
-        property "sonar.projectName", "Java :: Simple Project :: SonarQube Scanner for Gradle"
+        property "sonar.projectName", "Dummy Project :: Sonar"
         property "sonar.projectVersion", "1.0"
         property "sonar.projectKey", "org.sonarqube:java-gradle-simple"
         property "sonar.jacoco.reportPath", "${project.buildDir}/jacoco/test.exec"
+        property "sonar.host.url", "http://localhost:9000"
     }
 }
 
 sonarRunner {
     sonarProperties  {
-        property "sonar.projectName", "Java :: Simple Project :: SonarQube Scanner for Gradle (sonarRunner plugin)"
+        property "sonar.projectName", "Dummy Project :: Sonar"
         property "sonar.projectVersion", "1.0"
         property "sonar.projectKey", "org.sonarRunner:java-gradle-simple"
         property "sonar.jacoco.reportPath", "${project.buildDir}/jacoco/test.exec"
-        property "sonar.host.url", "http://sonar.tutor.com"
-        property "sonar.jdbc.url", "jdbc:mysql://sonar.tuto.com/sonar"
-        property "sonar.jdbc.driverClassName", "com.mysql.jdbc.Driver"
-        property "sonar.jdbc.username", "ahmed"
-        property "sonar.jdbc.password", "ahmed"
+        property "sonar.host.url", "http://localhost:9000"
     }
 }
 
