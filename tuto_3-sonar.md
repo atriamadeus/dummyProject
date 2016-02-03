@@ -101,6 +101,8 @@ If the task is successful, you shoud see the project now on the sonar server htt
 
 ![issues](https://github.com/pranav8494/dummyProject/blob/ahmed/images/img/issues.PNG)
 
+9- Let's now try to fix one of these issues.
+
 # Continuous Integration (CI)
 
 ### Integration
