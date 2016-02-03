@@ -3,7 +3,7 @@
 You have followed the 1st tutorial session, or you have forked this project https://github.com/pranav8494/dummyProject
 
 
-# 
+# Architecture
 
 ![architecture](https://github.com/pranav8494/dummyProject/blob/ahmed/images/img/architecture.PNG)
 
