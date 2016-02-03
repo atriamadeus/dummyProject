@@ -93,7 +93,13 @@ If the task is successful, you shoud see the project now on the sonar server htt
 
 ![associate](https://github.com/pranav8494/dummyProject/blob/ahmed/images/img/associate.PNG)
 
+7- From now on, you shoud be able to run sonar analysis directly from Eclipse 
 
+![eclipse](https://github.com/pranav8494/dummyProject/blob/ahmed/images/img/eclipse.PNG)
+
+8- Check sonar issues in the SonarQube Issues view 
+
+![issues](https://github.com/pranav8494/dummyProject/blob/ahmed/images/img/issues.PNG)
 
 # Continuous Integration (CI)
 
