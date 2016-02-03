@@ -8,7 +8,7 @@ You have followed the 1st tutorial session, or you have forked this project http
 ![architecture](https://github.com/pranav8494/dummyProject/blob/ahmed/images/img/architecture.PNG)
 
 
-# Local analysis (hands on !)
+# Local analysis (hands on folks !)
 
 
 ### Set-up a local sonar server
