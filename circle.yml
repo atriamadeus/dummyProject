@@ -14,9 +14,5 @@ dependencies:
 #  - "~/.gradle"
 #  - "build"
 
-//test:
-//  override: 
-//    - ./gradlew sonarqube -Dsonar.host.url=http://localhost:9000
-
 
 
