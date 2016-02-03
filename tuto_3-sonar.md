@@ -79,12 +79,15 @@ If the task is successful, you shoud see the project now on the sonar server htt
 ### Install a sonar scanner (SonarQube plugin) to run the analysis from Eclipse
 
 1- Go to Eclipse > Help > Eclipse Marketplace...
+
 2- Search for sonarqube
+
 3- Install SonarQube 3.5.0
 
 ![marketplace](https://github.com/pranav8494/dummyProject/blob/ahmed/images/img/marketplace.PNG)
 
 4- Restart Eclipse
+
 5- Check if Eclipse is able to connect to the sonar server : Eclipse > Windows > Preferences > SonarQube > Servers
 
 ![connection](https://github.com/pranav8494/dummyProject/blob/ahmed/images/img/connection.PNG)
