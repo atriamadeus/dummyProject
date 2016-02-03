@@ -1,1 +1,113 @@
-Hello
+# Prerequisite
+
+You have followed the 1st tutorial session, or you have forked this project https://github.com/pranav8494/dummyProject
+
+
+# 
+
+![architecture](https://github.com/pranav8494/dummyProject/blob/ahmed/images/img/architecture.PNG)
+
+
+# Local analysis (hands on !)
+
+
+### Set-up a local sonar server
+
+ 1- Go to 
+ 
+ 2- Download  
+ 
+ 3- Unzip the folder in 
+ 
+ 4- Start the server by clicking on StartSonar.bat
+
+![server](https://github.com/pranav8494/dummyProject/blob/ahmed/images/img/server.PNG)
+
+
+ 5- If every thing is fine, you should be able to browse http://localhost:9000/.
+
+![localhost](https://github.com/pranav8494/dummyProject/blob/ahmed/images/img/localhost.PNG)
+
+
+### Deploy the project on sonar server 
+
+You should run a first code quality analysis to make sonar server recognize your project.
+
+1- Configure the build.gradle
+
+    * apply plugin: 'org.sonarqube'
+    
+    * buildscript {
+              repositories { 
+                maven {
+                  url "http://repo1.maven.org/maven2/"
+                }
+                maven {
+                  url "https://plugins.gradle.org/m2/"
+                }
+                mavenLocal()
+              }
+              dependencies { 
+                classpath 'org.codehaus.sonar.runner:sonar-runner-dist:2.4'
+                classpath 'org.ajoberstar:gradle-jacoco:0.1.0'
+                classpath 'org.sonarqube.gradle:gradle-sonarqube-plugin:1.0'
+              }
+    }
+    
+    * sonarqube {
+          properties {
+              property "sonar.projectName", "Dummy Project :: Sonar"
+              property "sonar.projectVersion", "1.0"
+              property "sonar.projectKey", "org.sonarqube:java-gradle-simple"
+              property "sonar.jacoco.reportPath", "${project.buildDir}/jacoco/test.exec"
+              property "sonar.host.url", "http://localhost:9000"
+          }
+      } 
+ 
+
+2- Run (on GitBash) the "sonarqube" gradle task: ```./gradlew sonarqube```
+
+If the task is successful, you shoud see the project now on the sonar server http://localhost:9000/.
+
+![project_on_server](https://github.com/pranav8494/dummyProject/blob/ahmed/images/img/project_on_server.PNG)
+
+3- Click on the project 
+
+![magic](http://www.reactiongifs.com/r/mgc.gif)
+
+
+### Install a sonar scanner (SonarQube plugin) to run the analysis from Eclipse
+
+1- Go to Eclipse > Help > Eclipse Marketplace...
+2- Search for sonarqube
+3- Install SonarQube 3.5.0
+
+![marketplace](https://github.com/pranav8494/dummyProject/blob/ahmed/images/img/marketplace.PNG)
+
+4- Restart Eclipse
+5- Check if Eclipse is able to connect to the sonar server : Eclipse > Windows > Preferences > SonarQube > Servers
+
+![connection](https://github.com/pranav8494/dummyProject/blob/ahmed/images/img/connection.PNG)
+
+6- Right-click on the project in Package Exlporer view (Eclipse) and select Configure > Associate With SonarQube 
+
+![associate](https://github.com/pranav8494/dummyProject/blob/ahmed/images/img/associate.PNG)
+
+
+
+# Continuous Integration (CI)
+
+### Integration
+
+![integration](https://github.com/pranav8494/dummyProject/blob/ahmed/images/img/architecture.PNG)
+
+
+### ASR project as an example !
+
+Running sonar analysis on a remote server (on production): https://sonar.1asr.com/.
+
+
+
+# References
+
+- http://docs.sonarqube.org/display/SONAR/Documentation
