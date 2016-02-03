@@ -103,6 +103,20 @@ If the task is successful, you shoud see the project now on the sonar server htt
 
 9- Let's now try to fix one of these issues.
 
+For example, we will handle thew sonar violation "Standard ouputs should not be used directly to log anything".
+For that, we will need to update the ```build.gradle``` with a new dependency ```'org.slf4j:slf4j-api:1.7.12'```
+
+ ```
+ dependencies {
+    compile([
+    	  'org.slf4j:slf4j-api:1.7.12',
+       'commons-collections:commons-collections:3.2',
+       'joda-time:joda-time:2.6'
+    ])
+ ```
+
+
+
 # Continuous Integration (CI)
 
 ### Integration
