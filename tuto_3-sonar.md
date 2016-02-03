@@ -13,11 +13,11 @@ You have followed the 1st tutorial session, or you have forked this project http
 
 ### Set-up a local sonar server
 
- 1- Go to 
+ 1- Go to http://www.sonarqube.org/downloads/
  
- 2- Download  
+ 2- Download the SonarQube 5.1.2.
  
- 3- Unzip the folder in 
+ 3- Unzip the downloaded folder in your working directory.
  
  4- Start the server by clicking on StartSonar.bat
 
