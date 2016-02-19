@@ -1,6 +1,6 @@
 # Prerequisite
 
-You have followed the 1st tutorial session, or you have forked this project https://github.com/pranav8494/dummyProject
+Nothing in particular !
 
 
 # Architecture
